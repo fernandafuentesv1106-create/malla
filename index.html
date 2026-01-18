@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla curricular interactiva</title>
+  <meta name="description" content="Malla curricular interactiva con prerrequisitos y desbloqueo por aprobación." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-text">
+          <span class="brand-title">Malla de Enfermería</span>
+          <span class="brand-sub">Interactiva y visual</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#malla">Malla</a>
+        <a href="#ayuda">Cómo funciona</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="hero-title">Planifica tu avance con claridad</h1>
+      <p class="hero-desc">
+        Aprueba materias y desbloquea las siguientes. Una materia se habilita solo si
+        <strong>todas</strong> sus prerrequisitos están aprobadas.
+      </p>
+      <div class="hero-actions">
+        <button id="btnReset" class="btn secondary">Reiniciar estados</button>
+        <button id="btnExport" class="btn">Exportar progreso</button>
+        <button id="btnImport" class="btn">Importar progreso</button>
+        <input id="importInput" type="file" accept="application/json" style="display:none" />
+      </div>
+    </section>
+
+    <section id="malla" class="grid-section">
+      <!-- Los semestres y materias se renderizan dinámicamente desde script.js -->
+      <div id="gridRoot" class="grid-root" aria-live="polite"></div>
+    </section>
+
+    <section id="ayuda" class="help">
+      <h2>Cómo funciona</h2>
+      <ul class="help-list">
+        <li><strong>Estados:</strong> Bloqueada (gris), Disponible (rosado suave), Aprobada (rosado intenso).</li>
+        <li><strong>Desbloqueo:</strong> Una materia se habilita cuando todas sus prerrequisitos están aprobadas.</li>
+        <li><strong>Dependencias:</strong> Cada tarjeta muestra qué materias requiere y cuáles desbloquea.</li>
+        <li><strong>Progreso:</strong> Puedes exportar/importar tu avance para continuar más tarde.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>Malla de Enfermería</h4>
+        <p>Diseño en tonos rosados, femenino y legible. Hecho con cariño.</p>
+      </div>
+      <div class="footer-meta">
+        <span>© <span id="year"></span> — Todos los derechos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
