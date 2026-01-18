@@ -1,0 +1,47 @@
+body {
+  background: #fff0f6;
+  font-family: 'Poppins', sans-serif;
+  padding: 30px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  color: #c9184a;
+  margin-bottom: 30px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+}
+
+.subject {
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  border: 2px solid transparent;
+}
+
+.locked {
+  background: #f8d7e8;
+  color: #9d4edd;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.unlocked {
+  background: #ffd6e0;
+  color: #6a0572;
+}
+
+.approved {
+  background: #ff8fab;
+  color: white;
+  font-weight: 500;
+  border-color: #c9184a;
+}
